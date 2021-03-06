@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="img/favicons/pink_favicon.svg">
+  <!-- Place favicon.ico in the root directory -->
+  <script src="https://kit.fontawesome.com/ec4ce9a247.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <!-- Estilos generales -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Estilos Propios -->
+  <link rel="stylesheet" href="css/contacto.css">
+
+</head>
+<body>
+<header class="header">
+  <img src="img/logo_versiones/negativos/MV_Pink_Negative_Logo.svg" alt="Logo LD">
+  <div id="tag_container">
+    <a href="#" class="tags"><h1 id="tag1">Define</h1></a>
+    <a href="#" class="tags"><h1 id="tag2">Diseña</h1></a>
+    <a href="#" class="tags"><h1 id="tag3">Desarrolla</h1></a>
+  </div>
+  <div id="menu_control" class="close">
+    <button id="control" class="close"></button>
+  </div>
+  <ol id="menu_header" class="close">
+    <li>
+      <a id="home_bt" href="index.html" class="menu_item">Home</a>
+    </li>
+    <li>
+      <a id="portafolio_bt" href="portafolio.html" class="menu_item">Portafolio</a>
+    </li>
+    <li>
+      <a id="contacto_bt" href="contacto.html" class="menu_item">Contacto</a>
+    </li>
+    <li>
+      <a id="blog_bt" href="#" class="menu_item">Blog</a>
+    </li>
+  </ol>
+</header>
+<span id="contacto_tag">Contacto</span>
+
+<div class="contact_card" id="cc_01">
+  <p class="c_p">Contactate conmigo mediante mis redes sociales o simplemente dejame tu nombre
+  y correo.</p>
+  <form id="contacto_form" action="" method="post">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre">
+    <label for="email">Correo electronico</label>
+    <input type="text" id="email" name="email">
+    <input type="submit" value="Contactar">
+  </form>
+</div>
+
+<footer class="footer">
+  <div id="flecha_container">
+    <span class="fas fa-angle-double-up" id="flecha"></span>
+  </div>
+  <div id="footer_left">
+    <img src="img/logo_negativo.svg" alt="Logo LD" id="logo_BW">
+    <span>Liendo diseño y desarrollo</span>
+  </div>
+  <form action="" method="post">
+    <label for="name">Nombre</label>
+    <input type="text" id="name" name="name">
+    <label for="mail">Correo electronico</label>
+    <input type="text" id="mail" name="mail">
+    <input type="submit" class="c_boton" value="Contactar">
+  </form>
+  <div id="footer_rigth">
+    <ol class="links">
+      <li><a id="home_bt_footer" href="index.html" class="item_footer">Home</a></li>
+      <li><a id="portafolio_bt_footer" href="portafolio.html" class="item_footer">Portafolio</a></li>
+      <li><a id="contacto_bt_footer" href="./contacto.html" class="item_footer">Contacto</a></li>
+      <li><a id="blog_bt_footer" href="" class="item_footer">Blog</a></li>
+    </ol>
+    <ol class="links">
+      <li id="ig_bt"><img src="img/redes/instagram_color.svg"><img src="img/redes/instagram_bw.svg" alt="Instagram"><a
+        href="" class="red">Instagram</a></li>
+      <li id="fb_bt"><img src="img/redes/facebook_color.svg" alt=""><img src="img/redes/facebook_bw.svg" alt="Facebook"><a
+        href="" class="red">Facebook</a></li>
+      <li id="tw_bt"><img src="img/redes/twitter_color.svg" alt=""><img src="img/redes/twitter_bw.svg" alt="Twitter"><a
+        href="" class="red">Twitter</a></li>
+      <li id="wp_bt"><img src="img/redes/wp_color.svg" alt=""><img src="img/redes/wp_bw.svg" alt="Whatsapp"><a href=""
+                                                                                                               class="red">Whatsapp</a>
+      </li>
+    </ol>
+  </div>
+</footer>
+
+
+<!-- Scripts -->
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'transport', 'beacon');
+  ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+</html>

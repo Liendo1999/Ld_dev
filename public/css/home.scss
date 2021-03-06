@@ -1,0 +1,410 @@
+/* Section 1 */
+
+#home_head{
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  display: flex;
+  width: 80%;
+  margin: 70px auto 0;
+  padding-top: 30px;
+}
+#container_1{
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  height: 125px;
+
+}
+#foto_perfil{
+  width: 125px;
+}
+#foto_container{
+  clip-path: circle(50% at 50% 50%);
+}
+#about_us{
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 30px;;
+  padding: 10px 30px;
+  position: relative;
+  overflow: hidden;
+  h2{
+    display: flex;
+    font-weight: 500;
+    width: 100%;
+    position: relative;
+    font-size: 22px;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0.6rem;
+      left: -1rem;
+      width: 0.6rem;
+      height:0.6rem;
+      border-radius: 50%;
+      background-color: #009994;
+    }
+  }
+  p{
+    position: relative;
+    width: 100%;
+    font-weight: 400;
+    font-size: 15px;
+    top: 0;
+    margin: 0.6rem 0;
+  }
+  a{
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 65%;
+    border-radius: 3rem;
+    align-self: center;
+  }
+
+}
+.c_boton{
+  background-color: #cc147e;
+  font-weight: 500;
+  color: white;
+  height: 2rem;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  width: 80%;
+  &:hover,&:active{
+    background-color: #ac126a;
+  }
+}
+/* Menu Front-Back-Proyectos*/
+#menu_container{
+  width: 100%;
+  padding: 1em;
+  font-size: 10px;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+}
+
+/* Menu Content */
+#home_menu{
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content:space-around ;
+  padding: 2em 0.5em;
+}
+.item_menu{
+  cursor: pointer;
+  height: 2.4em;
+  font-size: 1.8em;
+  font-weight: 500;
+  background-color: white;
+  width: 100%;
+  padding-right: 5px;
+  text-decoration: none;
+  color: black;
+  border-radius: 15px;
+
+}
+.item_menu:before,
+.p_tecnologias:before{
+  content: "";
+  display: inline-flex;
+  justify-self: left;
+  position: relative;;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.p_tecnologias:before{
+  left: 0.45em;
+}
+button{
+  border-style: none;
+}
+
+/* circulos del menu y sus Actives */
+#BB,#UB{
+  opacity: 60%;
+  transition: all 0s;
+}
+#FB{
+  opacity: 100%;
+  transition: all 0s;
+  &::before{
+    background-color: #CC147E;
+  }
+  &:active{
+    background-color: #cc147e;
+    color: white;
+    &::before{
+      background-color: white;
+    }
+  }
+}
+#BB{
+  &::before{
+    background-color: #009994;
+  }
+  &:active{
+    background-color: #009994;
+    color: white;
+    &::before{
+      background-color: white;
+    }
+  }
+}
+#UB{
+  &::before{
+    background-color: #FF4E1D;
+  }
+  &:active{
+    background-color: #FF4E1D;
+    color: white;
+    &::before{
+      background-color: white;
+    }
+  }
+}
+
+#content_container{
+  display: block;
+  padding: 0 5%;
+}
+.no_show{
+  display: none;
+}
+.C_Item{
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  height: 170px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  position: relative;
+}
+
+.front,.back{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+  border-radius: 8px;
+  display: flex;
+}
+
+.front{
+  transform: perspective(600px) rotateX(0deg);
+}
+.back{
+  transform: perspective(600px) rotateX(180deg);
+}
+
+.items_tecnologias{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0.7);
+}
+
+.p_tecnologias {
+  font-size: 14px;
+  font-weight: 400;
+  align-self: center;
+  justify-self: center;
+  text-indent: 1em;
+  padding: 8px;
+  text-align: left;
+  strong{
+    font-weight: 600;
+    font-size: 18px;
+  }
+  &::before{
+    position: absolute;
+    top: 8px
+  }}
+/*Colores de circulos y Strongs de los parrafos*/
+#p_html{
+  strong{
+    color: #FF4E1D;
+  }
+  &::before{
+    background-color: #FF4E1D;
+  }
+}
+#p_css{
+  &::before{
+    background-color: #0074B1;
+  }
+  strong{
+    color: #066394;
+  }
+}
+#p_js{
+  &::before{
+    background-color: #FFB900;
+  }
+  strong{
+    color: #FFB900;
+  }
+}
+#p_db{
+  &::before{
+    background-color: #cc147e;
+  }
+  strong{
+    color: #ca147e;
+  }
+}
+#p_lp{
+  &::before{
+    background-color: #FFB900;
+  }
+  strong{
+    color: #FFB900;
+  }
+}
+#p_ui{
+  &::before{
+    background-color: #511268;
+  }
+  strong{
+    color:#511268;
+  }
+}
+#p_i{
+  &::before{
+    background-color: #FF4E1D;
+  }
+  strong{
+    color:#FF4E1D;
+  }
+}
+
+/* Media Query´s */
+//movil horizontal y tablet chica -- LISTO
+@media (min-width: 481px) and (max-width: 767px) {
+  #container_1{
+    height:170px;
+  }
+  #foto_perfil{
+    width: 170px;
+  }
+}
+//tablets y notebooks
+@media (min-width: 768px) and(max-width: 1024px){
+  #container_1{
+    height:225px;
+  }
+  #foto_perfil{
+    width: 225px;
+  }
+}
+//escritorios
+@media (min-width: 1025px){
+  #foto_perfil {
+    width: 250px;
+  }
+  #container_1 {
+    width: 80%;
+    margin-left: 10%;
+    height: 250px;
+    justify-content: space-between;
+  }
+  #about_us{
+    margin-bottom: -50px;
+    padding-bottom: 12px;
+    p{
+      font-size: 18px;
+    }
+    a{
+      width: 40%;
+    }
+  }
+  #home_menu {
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    margin-top: 70px;
+
+    li {
+      margin-right: 25px;
+    }
+  }
+  #F_Section, #B_Section, #UP_Section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
+  }
+  .no_show {
+    display: none !important;
+  }
+  .C_Item {
+    width: 100%;
+  }
+  .front, .back {
+    & > .p_tecnologias {
+      font-size: 16px;
+      padding: 20px;
+    }
+  }
+}
+//escritorio grande y tv
+@media (min-width: 1280px){
+}
+
+  /*
+  POSIBLE CAMBIO A UNA SOLA CARA
+ .C_Item{
+   width: 80%;
+   height: 200px;
+   padding: 20px 10px 50px;
+   justify-self: center;    background-color: white;
+ }
+
+ .front,.back{
+   width: 100%;
+   height: 100%;
+   backface-visibility: visible;
+   position: relative;
+   transition: transform .6s linear;
+   border-radius: 8px;
+   display: flex;
+   text-align: center;
+ }
+ .front{
+   transform:rotateX(0deg);
+ }
+ .back{
+   transform:rotateX(0deg);
+ }
+ .p_tecnologias{
+   align-self: center;
+   width: 60%;
+   font-size: 18px;
+ }
+ .items_tecnologias{
+   align-self: flex-end;
+   width: 20% !important;
+   margin-top: 18px;
+   margin-right: 10%;
+   &[alt="HTML"]{
+     position: relative;
+     align-self: center;
+     top: 8px;
+   }
+ }
+ */
+

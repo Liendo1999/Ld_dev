@@ -1,0 +1,482 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+body {
+  position: relative;
+  font-size: 10px;
+  width: 100%;
+  overflow-x: hidden;
+  background: url("../img/logo_versiones/logo_negativo.png") #cccccc;
+
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  display: flex;
+  background-color:white;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  h1{
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  img {
+    position: absolute;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+  }
+
+  #tag1,#tag2,#tag3{
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 0;
+    overflow: hidden;
+  }
+  #tag1,#tag2{
+    animation-name: text_show;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+  }
+  #tag2{
+    animation-delay: 3s;
+  }
+  #tag3{
+    width: 0rem;
+    animation-name: text_show_last;
+    animation-delay: 6s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+  .tags{
+    text-decoration: none;
+    color:black;
+  }
+}
+@keyframes text_show_last {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 10rem;
+  }
+}
+@keyframes text_show {
+  0%,100%{
+    width: 0px;
+  }
+  50%{
+    width: 10rem;
+  }
+}
+
+#menu_control {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 25px;
+  right: 45px;
+  #control {
+    background-color: #009994;
+    cursor: pointer;
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border-style: none;
+    transition: all 0.5s;
+    /*Bolitas*/
+    &::after,&::before{
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 1s;
+    }
+    /*Animacion*/
+    &.close{
+      &::before{
+        background-color: #ff4e1d;
+        right: -1.3rem;
+        transition: all 1s;
+      }
+      &::after{
+        background-color: #cc147e;
+        left: -1.3rem;
+      }
+    }
+
+    &.open{
+      background-color: #B20013;
+      &::before{
+        background-color: #B20013;
+        right: 0rem;
+      }
+      &::after{
+        background-color: #B20013;
+        left: 0rem;
+      }
+    }
+  }
+}
+#menu_header{
+  padding-top: 1rem;
+  align-self: flex-start;
+  background-color: #f1f0f0;
+  width: 50%;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  transition: all 1s;
+  position: relative;
+  left: 100%;
+  top: 70px;
+  li{
+    margin-bottom: 1em;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  #home_bt,#portafolio_bt,#blog_bt,#contacto_bt{
+    transition: all 0.5s;
+  }
+  #home_bt{
+    &:hover,&:active{color: #ffb900;}
+  }
+  #portafolio_bt{
+    &:hover,&:active{color: #009994;}
+  }
+  #blog_bt{
+    &:hover,&:active{color: #ff4e1d;}
+  }
+  #contacto_bt{
+    &:hover,&:active{color: #cc147e ;}
+  }
+}
+#menu_header.open{
+  position: relative;
+  left: 50%;
+  z-index: 99999999;
+}
+#menu_header.close{
+  position: relative;
+  left: 100%;
+  z-index: 100000000;
+}
+
+/* Footer Section*/
+/*Falta armar el footer completo
+  Colocar links
+*/
+footer{
+  margin-top: 50px;
+  background-color: #232323;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  #footer_left{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+      width: 125px;
+    }
+    span{
+      font-size: 25px;
+      font-weight: 500;
+      color: #eaeaea;
+      margin-top: 5px;
+    }
+  }
+  #footer_rigth{
+    display: flex;
+    justify-content: space-around;
+    ol{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+#flecha_container{
+  position: fixed;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: #cc147e;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  &:active{
+    background-color: #ac126a;
+  }
+}
+#flecha{
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin: auto;
+}
+.links{
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+
+}
+.links li img{
+  width: 25px;
+  height: 25px;
+  align-self: center;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  transition: all 0.2s;
+  margin-bottom: 25px;
+
+}
+.links li{
+  position: relative;
+  display: flex;
+  &:hover{
+    [alt="Instagram"],[alt="Facebook"],[alt="Twitter"],[alt="Whatsapp"]{
+      opacity: 0;
+    }
+   &[id="ig_bt"]{
+     &:hover, &:active{
+       a{
+         color: #ac126a;
+       }
+     }
+   }
+    &[id="fb_bt"]{
+     &:hover, &:active{
+       a{
+         color: #0043b9;
+       }
+     }
+   }
+    &[id="tw_bt"]{
+     &:hover, &:active{
+       a{
+         color: #12d6d4;
+       }
+     }
+   }
+    &[id="wp_bt"]{
+     &:hover, &:active{
+       a{
+         color: #14ca92;
+       }
+     }
+   }
+  }
+  .item_footer{
+    &[id="blog_bt_footer"]{
+      &:active,&:hover {
+        color: #e34205;
+      }
+    }
+    &[id="home_bt_footer"]{
+      &:active,&:hover{
+      color: #FFB900;}
+    }
+    &[id="portafolio_bt_footer"]{
+      &:active,&:hover {color: #009994;}
+    }
+    &[id="contacto_bt_footer"]{
+      &:active,&:hover{
+      color: #ac126a;}
+    }
+  }
+}
+.links a{
+  padding-left: 25px;
+  font-size: 25px;
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 5px;
+  transition: 0.2s;
+}
+form{
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-size: 30px;
+}
+input{
+  border-radius: 15px;
+  border-style: none;
+  width: 80%;
+  height: 1.2em;
+  align-self: center;
+}
+input[type="text"]{
+  background-color: #8ef1f1;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+input[type="submit"]{
+  background-color: #cc147e;
+  align-self: center;
+  border-style: none;
+  color: white;
+}
+
+/*Escritorio grande*/
+@media(min-width: 1025px){
+  header{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 125px 1fr 1fr 2fr 125px ;
+    grid-template-rows: 1fr;
+    height: 70px;
+    img{
+      grid-column-start: 2;
+      place-self: center;
+      left: 0;
+    }
+    #tag_container{
+      grid-column-start: 2;
+
+      width: 100%;
+      height: 100%;
+      .tags{
+        position: relative;
+      }
+      #tag1,#tag2,#tag3{
+        left: 60px;
+        top: 12px;
+      }
+    }
+  }
+  #menu_control {
+    display: none;
+  }
+  #menu_header {
+    grid-column-start: 4;
+    margin-top: 0;
+    flex-direction: row;
+    align-items: normal;
+    height: 70px;
+    width: max-content;
+    background-color: white;
+    top: 0;
+    &.open{
+      left: 100%;
+      transform: translateX(-100%);
+    }
+
+
+    /*Correccion posicion del ultimo boton*/
+    li:last-child{
+      margin-bottom: auto;
+    }
+  }
+  .menu_item {
+    position: relative;
+    margin-left: 2rem;
+  }
+  .menu_item::before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  #home_bt::before {
+    background-color: #FFB900;
+  }
+  #portafolio_bt::before {
+    background-color: #009994;
+  }
+  #contacto_bt::before {
+    background-color: #cc147e;
+  }
+  #blog_bt::before {
+    background-color: #FF4E1D;
+  }
+
+  footer{
+    flex-direction: row;
+    #footer_left{
+      width: 30%;
+      span{
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+      }
+      #logo_BW{
+        width: 200px;
+      }
+    }
+    #footer_rigth{
+      align-items: center;
+      justify-content: space-between;
+      width: 40%;
+      font-size: 30px;
+      font-weight: 500;
+      ol{
+        &:first-child{
+          margin-left: -25px;
+        }
+      }
+    }
+    form{
+      font-size: 25px;
+      input{
+        width: 70%;
+        height: 1.8em;
+        align-self: center;
+      }
+
+      input[type="submit"]{
+        background-color: #cc147e;
+        border-style: none;
+        color: white;
+        margin-bottom: 10px;
+      }
+    }
+    #flecha_container{
+      display: none;
+    }
+  }
+
+}
+
+/*Escritorio Grande*/
+@media (min-width: 1281px){
+  footer>#footer_rigth{
+    width: 30%;
+    justify-content: space-around;
+  }
+}
+
+
+

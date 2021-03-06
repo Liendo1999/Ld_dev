@@ -1,0 +1,12 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+  Julian Liendo -- Front-end Developer -- ...
+    <name> -- <role> -- <twitter>
+# THANKS
+  To my family
+
+# TECHNOLOGY COLOPHON
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css

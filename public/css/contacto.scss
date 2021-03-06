@@ -1,0 +1,68 @@
+#contacto_tag{
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  text-indent: 0.2em;
+  width: max-content;
+  background-color: white;
+  padding: 0.2em;
+  font-size:2em;
+  font-weight: 600;
+  border-radius: 0.5em;
+  margin-left: 10%;
+  &::before{
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    background-color: #cc147e;
+    border-radius: 50%;
+  }
+}
+
+.contact_card{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 300px;
+  padding: 25px 10px 0px 25px;
+  background-color: white;
+  margin: 20px auto;
+  border-radius: 24px;
+  position: relative;
+  &::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    background-color: #cc147e;
+    }
+}
+#cc_01::before{
+  background-color: #009994;
+}
+.c_p{
+  font-size: 18px;
+}
+
+#contacto_form{
+  color: black;
+  font-size: 22px;
+  margin-top: 5px;
+}
+
+
+footer{
+  width: 100%;
+
+
+  margin-top: 250px;
+}
+
+@media (min-width: 1025px) {
+  .c_p{
+    font-size: 18px;
+  }
+}
