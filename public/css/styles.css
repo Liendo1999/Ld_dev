@@ -1,8 +1,8 @@
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins";
+  font-family: "Poppins", Arial;
 }
 
 body {
@@ -51,7 +51,7 @@ header #tag2 {
   animation-delay: 3s;
 }
 header #tag3 {
-  width: 0rem;
+  width: 0;
   animation-name: text_show_last;
   animation-delay: 6s;
   animation-duration: 3s;
@@ -72,7 +72,7 @@ header .tags {
 }
 @keyframes text_show {
   0%, 100% {
-    width: 0px;
+    width: 0;
   }
   50% {
     width: 10rem;
@@ -120,11 +120,11 @@ header .tags {
 }
 #menu_control #control.open::before {
   background-color: #B20013;
-  right: 0rem;
+  right: 0;
 }
 #menu_control #control.open::after {
   background-color: #B20013;
-  left: 0rem;
+  left: 0;
 }
 
 #menu_header {
@@ -433,20 +433,6 @@ input[type=submit] {
   }
   footer #footer_rigth ol:first-child {
     margin-left: -25px;
-  }
-  footer form {
-    font-size: 25px;
-  }
-  footer form input {
-    width: 70%;
-    height: 1.8em;
-    align-self: center;
-  }
-  footer form input[type=submit] {
-    background-color: #cc147e;
-    border-style: none;
-    color: white;
-    margin-bottom: 10px;
   }
   footer #flecha_container {
     display: none;

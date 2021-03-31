@@ -1,8 +1,8 @@
 *{
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins';
+  font-family:'Poppins',Arial;
 }
 body {
   position: relative;
@@ -52,7 +52,7 @@ header {
     animation-delay: 3s;
   }
   #tag3{
-    width: 0rem;
+    width: 0;
     animation-name: text_show_last;
     animation-delay: 6s;
     animation-duration: 3s;
@@ -73,7 +73,7 @@ header {
 }
 @keyframes text_show {
   0%,100%{
-    width: 0px;
+    width: 0;
   }
   50%{
     width: 10rem;
@@ -122,11 +122,11 @@ header {
       background-color: #B20013;
       &::before{
         background-color: #B20013;
-        right: 0rem;
+        right: 0;
       }
       &::after{
         background-color: #B20013;
-        left: 0rem;
+        left: 0;
       }
     }
   }
@@ -243,7 +243,6 @@ footer{
   display: flex;
   flex-direction: column;
   justify-self: flex-end;
-
 }
 .links li img{
   width: 25px;
@@ -254,7 +253,6 @@ footer{
   left: 0;
   transition: all 0.2s;
   margin-bottom: 25px;
-
 }
 .links li{
   position: relative;
@@ -448,21 +446,7 @@ input[type="submit"]{
         }
       }
     }
-    form{
-      font-size: 25px;
-      input{
-        width: 70%;
-        height: 1.8em;
-        align-self: center;
-      }
 
-      input[type="submit"]{
-        background-color: #cc147e;
-        border-style: none;
-        color: white;
-        margin-bottom: 10px;
-      }
-    }
     #flecha_container{
       display: none;
     }
