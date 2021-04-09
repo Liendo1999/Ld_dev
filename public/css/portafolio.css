@@ -36,6 +36,7 @@ body {
   padding: 0.8em 0.8em 2em;
   border-radius: 0.8em;
   margin-top: 2em;
+  position: relative;
 }
 .proyecto .p_contenido {
   display: flex;
@@ -47,20 +48,39 @@ body {
   height: 125px;
 }
 .proyecto .p_contenido p {
-  font-size: 1em;
+  font-size: 1.2em;
   margin-left: 0.5em;
   font-weight: 500;
   align-self: center;
 }
-.proyecto .p_contenido span {
-  position: absolute;
-  align-self: flex-end;
-  top: 100%;
-  left: 2em;
+.proyecto .p_link_container {
+  display: flex;
+  margin-top: 0.4em;
+  flex-direction: column;
+  position: relative;
+  right: -50%;
+}
+.proyecto .p_link_container .p_link {
+  font-size: 1.4em;
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+}
+.proyecto .p_link_container .p_link:first-child:hover {
+  color: #FF4E1D;
+}
+.proyecto .p_link_container .p_link:first-child:active {
+  color: #FF4E1D;
+}
+.proyecto .p_link_container .p_link:last-child:hover {
+  color: #ac126a;
+}
+.proyecto .p_link_container .p_link:last-child:active {
+  color: #ac126a;
 }
 
 .p_titulo {
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 500;
   position: relative;
   text-indent: 0.8em;
@@ -100,6 +120,37 @@ body {
   text-align: center;
   font-weight: 600;
   font-size: 20px;
+}
+
+@media (min-width: 1025px) {
+  #portafolio_section {
+    padding: 10em 12em;
+  }
+
+  #portafolio_tag {
+    margin-left: 2em;
+  }
+
+  .proyecto {
+    padding: 1em 2em 2em;
+  }
+  .proyecto .p_contenido img {
+    height: 240px;
+    width: 426px;
+  }
+  .proyecto .p_contenido .p_p {
+    font-size: 2em;
+    font-weight: 400;
+  }
+  .proyecto .p_link_container {
+    flex-direction: row;
+  }
+  .proyecto .p_link_container .p_link {
+    font-size: 2em;
+  }
+  .proyecto .p_link_container .p_link:last-child {
+    margin-left: 2em;
+  }
 }
 
 /*# sourceMappingURL=portafolio.css.map */

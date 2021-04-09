@@ -6,6 +6,7 @@ body{
   padding: 7em 1.5em 2em 1.5em;
   width: 100%;
 }
+
 #portafolio_tag{
   display: flex;
   align-items: center;
@@ -34,6 +35,7 @@ body{
   padding: 0.8em 0.8em 2em;
   border-radius: 0.8em;
   margin-top: 2em;
+  position: relative;
 
   .p_contenido {
     display: flex;
@@ -46,22 +48,30 @@ body{
     }
 
     p {
-      font-size: 1em;
+      font-size: 1.2em;
       margin-left: 0.5em;
       font-weight: 500;
       align-self: center;
     }
-
-    span {
-      position: absolute;
-      align-self: flex-end;
-      top: 100%;
-      left: 2em;
+  }
+  .p_link_container{
+    display: flex;
+    margin-top: 0.4em;
+    flex-direction: column;
+    position: relative;
+    right: -50%;
+    .p_link{
+      font-size: 1.4em;
+      text-decoration: none;
+      font-weight: 600;
+      color: black;
+      &:first-child{&:hover{color: #FF4E1D}&:active{color: #FF4E1D}}
+      &:last-child{&:hover{color: #ac126a}&:active{color: #ac126a}}
     }
   }
 }
 .p_titulo {
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 500;
   position: relative;
   text-indent: 0.8em;
@@ -103,6 +113,25 @@ body{
   }
 }
 
-@media (min-width: 1281px){
+@media (min-width: 1025px){
+  #portafolio_section{padding:10em 12em;}
+  #portafolio_tag{margin-left: 2em}
+  .proyecto{
+    padding: 1em 2em 2em;
+    .p_contenido{
+      img{height: 240px;width: 426px;}
+      .p_p{
+        font-size: 2em;
+        font-weight: 400;
+      }
+    }
+    .p_link_container{
+      flex-direction: row;;
+      .p_link{
+        font-size: 2em;
+        &:last-child{margin-left: 2em}
+      }
+    }
 
+  }
 }
